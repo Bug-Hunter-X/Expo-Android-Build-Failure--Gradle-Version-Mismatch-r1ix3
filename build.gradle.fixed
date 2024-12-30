@@ -1,0 +1,15 @@
+The solution is to explicitly specify the Gradle version in the `build.gradle` file. Here's how to do it:
+
+1. Open the `android/build.gradle` file in your Expo project.
+2. Locate the `dependencies` block within the `buildscript` block.
+3. Update the `classpath` dependency to specify the desired Gradle version. For example:
+
+```gradle
+buildscript {
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.0.0") // or latest compatible version
+    }
+}
+```
+4. Locate the `dependencies` block in the app level `build.gradle` file and ensure it's compatible with your updated Gradle version
+5. Save the changes and try building your APK again using the Expo CLI.  Make sure to clean and rebuild after making this change for it to take effect.
